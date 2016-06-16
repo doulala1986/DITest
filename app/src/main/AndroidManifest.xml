@@ -1,0 +1,72 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ctsi.di.test">
+
+    <application
+        android:name=".dagger.application.CTSIApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".dagger.biz.ui.Activity_Main">
+
+        </activity>
+        <activity android:name=".rxlifecycle.Activity_LifeCycle">
+
+        </activity>
+        <activity android:name=".rxlifecycle.Activity_Entrance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".dagger.biz.ui.Activity_Scope">
+
+        </activity>
+
+
+        <activity android:name=".butterknife.BKActivity">
+
+
+        </activity>
+        <activity android:name=".parcelable.Activity_Parcelable_A">
+
+
+        </activity>
+        <activity android:name=".parcelable.Activity_Parcelable_B">
+
+
+        </activity>
+
+        <service
+            android:name=".statableservice.services.protect.DaemonService"
+            android:process=":service" />
+
+        <activity android:name=".statableservice.ui.Activity_Main_Protect">
+
+
+        </activity>
+
+
+        <activity android:name=".statableservice.ui.Activity_Main_SafeProcess">
+
+
+        </activity>
+
+
+        <service
+            android:name=".statableservice.services.safeprocess.DService"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            android:process=":service">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".statableservice.services.safeprocess.DaemonService2"
+            android:process=":service"></service>
+    </application>
+
+</manifest>
