@@ -22,11 +22,11 @@ public class Activity_Parcelable_B extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        User user=   Parcels.unwrap(getIntent().getParcelableExtra("parcelable"));
+        User user = Parcels.unwrap(getIntent().getParcelableExtra("parcelable"));
 
-        HashMap<String,User> u=user.getModules();
-        User user0=u.get("1");
-        Log.e("username",user.getName());
-
+        HashMap<String, User> u = user.getModules();
+        User user0 = u.get("1");
+        Log.e("username", user.getName());
+       //git commit test
     }
 }
